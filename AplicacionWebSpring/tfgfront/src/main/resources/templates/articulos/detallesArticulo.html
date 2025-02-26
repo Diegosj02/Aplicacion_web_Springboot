@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/logo.png">
+    <title>Detalles Articulo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div th:if="${usuarioActual == null}">
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a th:href="@{/uusuario/}" class="nav-link px-2 text-white">Inicio</a></li>
+                    <li><a th:href="@{/ccanchas/listado}" class="nav-link px-2 text-white">Instalaciones</a></li>
+                    <li><a th:href="@{/aarticulos/listado}" class="nav-link px-2 text-secondary">Tienda</a></li>
+                    <li><a th:href="@{/nnoticias/listado}" class="nav-link px-2 text-white">Noticias</a></li>
+                </ul>
+
+                <div class="text-end">
+                    <a class="btn btn-outline-light me-2" th:href="@{/uusuario/inicioSesion}">Iniciar Sesión</a>
+                    <a class="btn btn-warning" th:href="@{/uusuario/nuevoUsuario}">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<div th:unless="${usuarioActual == null}">
+    <div th:if="${usuarioActual.getId()!=-1}">
+        <header class="p-3 text-bg-dark">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a th:href="@{/uusuario/}" class="nav-link px-2 text-white">Inicio</a></li>
+                        <li><a th:href="@{/ccanchas/listado}" class="nav-link px-2 text-white">Instalaciones</a></li>
+                        <li><a th:href="@{/aarticulos/listado}" class="nav-link px-2 text-secondary">Tienda</a></li>
+                        <li><a th:href="@{/nnoticias/listado}" class="nav-link px-2 text-white">Noticias</a></li>
+                    </ul>
+                    <div class="dropdown text-end">
+                        <a href="#"
+                           class="d-block link-body-emphasis text-decoration-none dropdown-toggle show text-white"
+                           data-bs-toggle="dropdown" aria-expanded="false" th:text="${usuarioActual.getNombre()}"></a>
+                        <ul class="dropdown-menu text-small"
+                            data-popper-placement="bottom-end">
+                            <li><a class="dropdown-item" th:href="@{/uusuario/datosUsuario}">Datos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" th:href="@{/uusuario/inicio}">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div th:if="${usuarioActual.getId()==-1}">
+        <header class="p-3 text-bg-dark">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 align-items-center">
+                        <li><a th:href="@{/uusuario}" class="nav-link px-2 text-secondary">Inicio</a></li>
+                        <div class="dropdown mr-5">
+                            <a href="#"
+                               class="d-block link-body-emphasis text-decoration-none dropdown-toggle show text-white"
+                               data-bs-toggle="dropdown" aria-expanded="false" th:text="'Instalaciones'"></a>
+                            <ul class="dropdown-menu text-small"
+                                data-popper-placement="bottom-end">
+                                <li><a class="dropdown-item" th:href="@{/ccanchas/listado}">Ver Instalaciones</a></li>
+                                <li><a class="dropdown-item" th:href="@{/ccanchas/opcionesAdministrador}">Opciones de
+                                    administrador</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown mr-5">
+                            <a href="#"
+                               class="d-block link-body-emphasis text-decoration-none dropdown-toggle show text-white"
+                               data-bs-toggle="dropdown" aria-expanded="false" th:text="'Tienda'"></a>
+                            <ul class="dropdown-menu text-small"
+                                data-popper-placement="bottom-end">
+                                <li><a class="dropdown-item" th:href="@{/aarticulos/listado}">Ver Tienda</a></li>
+                                <li><a class="dropdown-item" th:href="@{/aarticulos/opcionesAdministrador}">Opciones de
+                                    administrador (Articulos)</a></li>
+                                <li><a class="dropdown-item" th:href="@{/mmateriales/opcionesAdministrador}">Opciones de
+                                    administrador (Alquiler)</a></li>
+                                <li><a class="dropdown-item" th:href="@{/ddescuentos/opcionesAdministrador}">Opciones de
+                                    administrador (Descuentos)</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown mr-5">
+                            <a href="#"
+                               class="d-block link-body-emphasis text-decoration-none dropdown-toggle show text-white"
+                               data-bs-toggle="dropdown" aria-expanded="false" th:text="'Noticias'"></a>
+                            <ul class="dropdown-menu text-small"
+                                data-popper-placement="bottom-end">
+                                <li><a class="dropdown-item" th:href="@{/nnoticias/listado}">Ver Noticias</a></li>
+                                <li><a class="dropdown-item" th:href="@{/nnoticias/opcionesAdministrador}">Opciones de
+                                    administrador</a></li>
+                            </ul>
+                        </div>
+                        <li><a th:href="@{/uusuario/listadoUsuarios}" class="nav-link px-2 text-white">Usuarios</a></li>
+                    </ul>
+                    <div class="dropdown text-end">
+                        <a href="#"
+                           class="d-block link-body-emphasis text-decoration-none dropdown-toggle show text-white"
+                           data-bs-toggle="dropdown" aria-expanded="false" th:text="${usuarioActual.getNombre()}"></a>
+                        <ul class="dropdown-menu text-small"
+                            data-popper-placement="bottom-end">
+                            <li><a class="dropdown-item" th:href="@{/uusuario/datosUsuario}">Datos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" th:href="@{/uusuario/inicio}">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<header class="p-3 text-bg-dark barra-secundaria">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <ul class="nav col-12 justify-content-center mb-md-0">
+                <li><a th:href="@{/aarticulos/listado}" class="nav-link px-2 text-secondary">Comprar</a></li>
+                <li><a th:href="@{/mmateriales/listado}" class="nav-link px-2 text-white">Alquilar</a></li>
+                <li><a th:href="@{/ddescuentos/listado}" class="nav-link px-2 text-white">Descuentos</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="container_articulo">
+    <div class="card">
+        <div class="detalles-producto">
+            <div class="imagen-producto">
+                <img th:src="${articuloActual.getImagen()}" alt="">
+            </div>
+            <div class="informacion-producto">
+                <div class="nombre-producto" th:text="${articuloActual.getId()}+' - '+${articuloActual.getNombre()}">
+                    Nombre del Producto
+                </div>
+                <div class="precio-producto" th:text="Precio+': '+ ${articuloActual.getPrecio()}+'€'">Precio: $100</div>
+                <div class="tipo-producto" th:text="${articuloActual.getTipo()}">Tipo: Tipo del Producto</div>
+                <div th:unless="${articuloActual.getTipo().toLowerCase().equals('ropa')}">
+                    <div th:if="${deportivoActual.getCantidad()}<5">
+                        <div class="cantidad-producto-poca"
+                             th:text="' (Quedan ' + ${deportivoActual.getCantidad()} +')'"></div>
+                        <div th:unless="${usuarioActual == null}">
+                            <form th:action="@{/aarticulos/formularioCompra}" method="get">
+                                <label>
+                                    <input hidden="hidden" name="idArticulo" th:value="${articuloActual.getId()}">
+                                </label>
+                                <button class="btn btn-primary btn-compra">Comprar</button>
+                            </form>
+                            <form th:action="@{/aarticulos/annadirLista}" method="get">
+                                <label>
+                                    <input hidden="hidden" name="idArticulo" th:value="${articuloActual.getId()}">
+                                </label>
+                                <button class="btn btn-outline-dark" type="submit">Añadir al carrito de Compra</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div th:unless="${deportivoActual.getCantidad()}<5">
+                        <div class="cantidad-producto"
+                             th:text="' (Quedan ' + ${deportivoActual.getCantidad()} +')'"></div>
+                        <div th:unless="${articuloActual.getTipo().toLowerCase().equals('ropa')}">
+                            <div class="tipo-producto" th:text="Deporte +': '+${deportivoActual.getDeporte()}"></div>
+                        </div>
+                        <div th:unless="${usuarioActual == null}">
+                            <form th:action="@{/aarticulos/formularioCompra}" method="get">
+                                <label>
+                                    <input hidden="hidden" name="idArticulo" th:value="${articuloActual.getId()}">
+                                </label>
+                                <button class="btn btn-primary">Comprar</button>
+                            </form>
+                            <form th:action="@{/aarticulos/annadirLista}" method="get">
+                                <label>
+                                    <input hidden="hidden" name="idArticulo" th:value="${articuloActual.getId()}">
+                                </label>
+                                <button class="btn btn-outline-dark" type="submit">Añadir al carrito de Compra</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div th:if="${articuloActual.getTipo().toLowerCase().equals('ropa')}">
+                    <div class="tipo-producto" th:text="Tallas + ' disponibles' +': '"></div>
+                    <div th:each="ropa : ${ropaActual}">
+                        <div th:each="articulo : ${listadoArticulos}">
+                            <div th:if="${articulo.getId()==ropa.getIdPropio().getIdropa()}">
+                                <div th:if="${ropa.getCantidad()}<5">
+                                    <div class="cantidad-producto-poca"
+                                         th:text="${ropa.getIdPropio().getTalla()} + ' (Quedan ' + ${ropa.getCantidad()} +')'"></div>
+                                </div>
+                                <div th:unless="${ropa.getCantidad()}<5">
+                                    <div class="tipo-producto"
+                                         th:text="${ropa.getIdPropio().getTalla()} + ' (Quedan ' + ${ropa.getCantidad()} +')'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div th:unless="${usuarioActual == null}">
+                        <form th:action="@{/aarticulos/formularioCompra}" method="get">
+                            <label>
+                                <input hidden="hidden" name="idArticulo" th:value="${articuloActual.getId()}">
+                            </label>
+                            <button class="btn btn-primary">Comprar</button>
+                        </form>
+                        <form th:action="@{/aarticulos/annadirLista}" method="get">
+                            <label>
+                                <input hidden="hidden" name="idArticulo" th:value="${articuloActual.getId()}">
+                            </label>
+                            <button class="btn btn-outline-dark" type="submit">Añadir al carrito de Compra</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<a class="btn btn-secondary" role="button" th:href="@{/aarticulos/listado}">Volver a la Tienda</a>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</html>

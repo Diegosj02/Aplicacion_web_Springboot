@@ -1,0 +1,687 @@
+/*datosUsuario*/
+.container_datos {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: auto;
+}
+
+.tarjeta-datos{
+    width: 18rem;
+}
+.columna-user{
+    margin-top: 15px
+}
+
+/*inicioSesion*/
+.form-container-centrado {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 1% auto 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/*registro*/
+.form-group-registro {
+    margin-bottom: 20px;
+}
+
+.btn-registrar {
+    margin-top: 20px;
+}
+
+.btn-volver {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+/*pagoTorneo*/
+.calendar-icon, .clock-icon {
+    float: left;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/*PagarReserva*/
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.icon-label-container {
+    display: inline-block;
+}
+
+
+/*ReservaCancha*/
+.form-container-reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.form-group-reserva {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.horas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+#materialNecesario {
+    margin-left: 40px;
+}
+
+
+
+#materialNecesario:checked + .dropdown-content {
+    display: block;
+}
+
+.calendar-icon-reserva{
+    float: left;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.material-section {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content .material-checkbox {
+    padding: 5px;
+    display: block;
+}
+
+.dropdown-content .material-checkbox input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+.boton-hora {
+    margin-right: 10px
+}
+
+.boton-volver {
+    display: block;
+    margin-top: 20px;
+}
+
+/*detallesNoticia*/
+.card-noticia{
+    display: flex; /* Hacer que los elementos internos sean flexibles */
+    align-items: center; /* Alinear verticalmente los elementos */
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 10%; /* Deja un 25% de la página a la izquierda */
+    margin-right: 10%;
+}
+.card-body-noticia{
+    justify-content: center;
+    text-align: center;
+}
+/*listaNoticias*/
+.noticia-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow: hidden; /* Limpiar el float */
+    margin-top: 20px;
+    margin-left: 10%; /* Deja un 25% de la página a la izquierda */
+    margin-right: 10%;
+    display: flex; /* Hacer que los elementos internos sean flexibles */
+    align-items: center; /* Alinear verticalmente los elementos */
+    justify-content: space-between;
+}
+
+.fecha-hora {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    align-self: center;
+    float: left;
+}
+
+.fecha-hora h5 {
+    font-size: 1em;
+}
+
+.cabecera {
+    text-align: center;
+    align-self: center;
+    /* Centrar horizontalmente */
+    margin: auto;
+    float: none;
+    width: 50%; /* Ancho del 50% para centrar la cabecera */
+}
+
+.cabecera h2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 2.5em;
+}
+
+
+
+/*detallesMaterial*/
+.container_articulo{
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    margin-top: 5%;
+}
+.detalles-producto{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+.imagen-producto{
+    flex: 1;
+    margin-right: 5%;
+    border: 2px solid black;
+}
+.imagen-producto img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.informacion-producto{
+    flex:1;
+}
+.nombre-material{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.boton-alquilar{
+    margin-left: 10px;
+}
+.precio-material{
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: red
+}
+
+/*MaterialesAlquiler*/
+.paginador {
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.form-column {
+    border-right: 2px solid black;
+}
+
+.container-fluid {
+    border-top: 2px solid black;
+}
+
+.barra-secundaria {
+    border-top: 2px solid black;
+}
+
+
+
+.buscarMaterial {
+    width: 30%;
+    margin-right: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+}
+
+.imagen-guardado {
+    width: 25%
+}
+
+.columna {
+    margin-top: 15px
+}
+
+.precio-material {
+    color: red;
+    font-size: 20px
+}
+/*tienda-descuentos*/
+.paginador{
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.form-column {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.container-fluid{
+    border-top: 2px solid black;
+}
+.barra-secundaria{
+    border-top: 2px solid black;
+}
+.busquedaNombre{
+    width: 30%; margin-right: 15px; margin-top: auto; margin-bottom: auto;
+}
+.columna{
+    margin-top: 15px
+}
+.precio-descuento{
+    color: red; font-size: 20px
+}
+
+/*DetallesDescuento*/
+.container_articulo{
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    margin-top: 5%;
+}
+.detalles-producto{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+.imagen-producto{
+    flex: 1;
+    margin-right: 5%;
+    border: 2px solid black;
+}
+.imagen-producto img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.informacion-producto{
+    flex:1;
+}
+.nombre-descuento{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.precio-descuento{
+    color: red
+}
+.boton-compra{
+    margin-left: 10px;
+}
+
+/*Instalaciones*/
+
+.carta-canchas{
+    width: 50rem;
+}
+.columna{
+    margin-top: 15px
+}
+.precio-cancha{
+    color: red; font-size: 15px;
+}
+/*detallesCancha*/
+
+.cancha-carta{
+    width: 80%;
+}
+.cancha-titulo{
+    font-size:40px;
+}
+.cancha-precio{
+    color: red; font-size: 15px
+}
+
+/*tienda-articulo*/
+.paginador {
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.form-column {
+    border-right: 2px solid black;
+}
+
+.container-fluid {
+    border-top: 2px solid black;
+}
+
+.barra-secundaria {
+    border-top: 2px solid black;
+}
+
+
+
+.buscador {
+    width: 30%;
+    margin-right: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+}
+
+.imagen-carrito {
+    width: 25%
+}
+
+.columna {
+    margin-top: 15px
+}
+
+.precio-articulo {
+    color: red;
+    font-size: 15px
+}
+
+/*PagarCompraArticulos*/
+.vertical-line {
+    border-left: 2px solid #000;
+    height: 100%;
+}
+
+
+
+.nombre-articulo {
+    font-weight: bold;
+}
+
+/*PagarCompraArticulo*/
+.vertical-line {
+    border-left: 2px solid #000;
+    height: 100%;
+}
+
+.nombre-articulo{
+    font-weight: bold;
+}
+
+/*ListaArticulos*/
+.container_articulo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5%;
+}
+
+.detalles-producto {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.imagen-producto {
+    flex: 1;
+    margin-right: 5%;
+    border: 2px solid black;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.informacion-producto {
+    flex: 1;
+}
+
+.nombre-producto {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.precio-producto {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.pagar-btn {
+    margin: 5px 0; /* Margen de 5px arriba y abajo */
+    width: 100%; /* Hacer el botón ocupar todo el ancho disponible */
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+.container_articulo {
+    display: flex;
+    justify-content: center; /* Para centrar horizontalmente */
+    align-items: flex-start;
+    margin-top: 5%;
+}
+
+.precio-producto{
+    color: red;
+}
+
+/*formularioCompra*/
+.main-card{
+    margin: 1% auto 0;
+    max-width: 800px;
+}
+.imagen{
+    max-width: 100%;
+}
+.precio-texto{
+    color: red;
+}
+
+/*DetallesArticulos*/
+.container_articulo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5%;
+}
+
+.detalles-producto {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.imagen-producto {
+    flex: 1;
+    margin-right: 5%;
+    border: 2px solid black;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.informacion-producto {
+    flex: 1;
+}
+
+.nombre-producto {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.precio-producto {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: red;
+}
+
+.tipo-producto {
+    font-size: 16px;
+    color: #888;
+
+}
+.cantidad-producto-poca {
+    font-size: 16px;
+    color: lightcoral;
+
+}
+.cantidad-producto {
+    font-size: 16px;
+    color: #888;
+
+}
+
+.btn-compra{
+    margin-left: 10px;
+}
+
+/*pagoAlquiler*/
+.vertical-line {
+    border-left: 2px solid #000;
+    height: 100%;
+}
+.date-time-card {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.calendar-icon, .clock-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/*PagarAlquileres*/
+.vertical-line {
+    border-left: 2px solid #000;
+    height: 100%;
+}
+
+.date-time-card {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.calendar-icon, .clock-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.dropdown-menu {
+    position: absolute;
+    inset: 0 0 auto auto;
+    margin: 0;
+    transform: translate(0px, 34px);
+}
+/*ListaMateriales*/
+.container_articulo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5%;
+}
+
+.detalles-producto {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.imagen-producto {
+    flex: 1;
+    margin-right: 5%;
+    border: 2px solid black;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.informacion-producto {
+    flex: 1;
+}
+
+.nombre-producto {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.precio-producto {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.calendar-icon, .clock-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/*formularioAlquiler*/
+.calendar-icon, .clock-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+/*error*/
+.centered-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container_error {
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.centered-body h1 {
+    font-size: 72px;
+    margin: 0;
+}
+
+.centered-body h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.centered-body p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.centered-body a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.centered-body a:hover {
+    background-color: #0056b3;
+}
